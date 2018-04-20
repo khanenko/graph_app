@@ -1,0 +1,2 @@
+export const MAX_CANDLES_LENGTH = 100;
+export const SECOND_LAST_CANDLE = MAX_CANDLES_LENGTH - 2;

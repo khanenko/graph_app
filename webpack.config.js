@@ -45,11 +45,5 @@ module.exports = {
     },
     plugins: [
         extractPlugin
-    ],
-    node: {
-        fs: "empty",
-        net: "empty",
-        tls: "empty"
-    }
-
+    ]
 };
