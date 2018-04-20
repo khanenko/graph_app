@@ -3,6 +3,7 @@ import AmCharts from "@amcharts/amcharts3-react";
 import cloneDeep from 'lodash/cloneDeep'
 import {makeConfig} from '../configs/chartconfig';
 import {prepareData} from '../utils/prepareData';
+import {requestPayload} from '../configs/requestConfig';
 
 export class App extends React.Component {
     constructor(props) {
@@ -22,11 +23,7 @@ export class App extends React.Component {
             }
         };
 
-        const msg = JSON.stringify({
-            event: "subscribe",
-            channel: "candles",
-            key: "trade:1m:tBTCUSD"
-        });
+        const msg = JSON.stringify(requestPayload);
 
         wss.onopen = () => wss.send(msg);
     }
